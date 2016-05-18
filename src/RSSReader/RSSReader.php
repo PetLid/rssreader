@@ -1,6 +1,6 @@
 <?php
 
-namespace Pezze\RSSReader;
+namespace petlid\RSSReader;
 
 /**
  * To attach comments-flow to a page or some content.
