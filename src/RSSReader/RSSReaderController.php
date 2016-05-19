@@ -37,12 +37,6 @@ class RSSReaderController implements \Anax\DI\IInjectionAware
         ]);
     }
 
-
-    public function setFeedUrl($url)
-    {
-        $this->RSSFeed->set_feed_url($url);
-    }
-
     public function viewAction($noOfItems = 5)
     {
         $rssPosts = $this->RSSFeed->get_items(0, $noOfItems);
