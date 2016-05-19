@@ -32,7 +32,8 @@
 }
 
 .rss-item img {
-    display:none;
+    max-height:100px;
+    max-width: 100px;
 }
 
 .rss-item p.date {
