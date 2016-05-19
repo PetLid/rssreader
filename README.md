@@ -9,7 +9,8 @@ By Petrus Lidholm | pelle@lidholm.se
 Since rssreader is designed for Anax/MVC framework and is dependant on it, it is required that you get the framework before following the steps below.
 Anax/MVC is located at https://github.com/mosbth/Anax-MVC.git.
 
-(**rssreader** also uses SimplePie however this is included in the package)
+**rssreader** also uses SimplePie, include it in the composer.json located in the root
+:`"require": { "simplepie/simplepie": "dev-master" }`.
 
 ### Download
 You can either download this repo as a .zip-file or you can use composer to get the package through packagist
