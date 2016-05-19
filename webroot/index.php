@@ -5,26 +5,26 @@
  *
  */
 // Include the essential settings.
-require __DIR__.'/config.php';
+require __DIR__.'/config_with_app.php';
 
 
 // Create services and inject into the app.
 $di  = new \Anax\DI\CDIFactoryDefault();
 
-$di->set('RSSReader', function() use ($di) {
-    $reader = new Pezze\RSSReader();
-    $reader->setDI($di);
-    return $reader;
+$di->set('RssController', function() use ($di) {
+    $controller = new \petlid\RSSReader\RSSReaderController("http://www.historytoday.com/feed/rss.xml");
+    $controller->setDI($di);
+    return $controller;
 });
 
-$app = new \Anax\Kernel\CAnax($di);
 
-
-
-// Home route
+// Standard route
 $app->router->add('', function() use ($app) {
 
-    echo "Yo!";
+    $app->dispatcher->forward([
+        'controller' => 'RSS',
+        'action'     => 'view',
+    ]);
 });
 
 
@@ -35,16 +35,3 @@ $app->router->handle();
 $app->theme->render();
 
 ?>
-
-<!doctype html>
-<html lang="en">
-
-<head>
-<meta charset=utf8>
-<title>Rssfeed example</title>
-</head>
-
-<body>
-<p>Ey!</p>
-</body>
-</html>

@@ -1,0 +1,43 @@
+.rss-feed ul {
+    list-style: none;
+}
+
+.rss-feed ul li {
+
+    display: block;
+}
+
+.rss-item {
+    border-bottom: 1px solid black;
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.rss-item h2 {
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.rss-item p {
+    font-size: 14px;
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.rss-item img {
+    display:none;
+}
+
+.rss-item p.date {
+    position: absolute;
+    bottom: 5px;
+    margin: 0;
+    font-style: italic;
+}
