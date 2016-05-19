@@ -30,11 +30,7 @@ $di->set('RssController', function() use ($di) {
 ```
 **Important** replace `:url` with the url (in quotation marks) of the RSS-feed you'd like to display.
 
-To view the RSS-feed you can add the route to the viewAction of RSSReaderController directly in the url like this:
-`/rss/view/:noOfItems`,
-
-
-or you can add a route to the viewAction like this:
+To view the RSS-feed you can add a route to the viewAction in your front controller like this:
 ```
 $app->router->add('rss', function() use ($app) {
     $app->dispatcher->forward([
@@ -46,7 +42,7 @@ $app->router->add('rss', function() use ($app) {
     ]);
 });
 ```
-the name of the added route is irrelevant.
+the name of the added route is irrelevant. To access the route simply go to your front controller, for example index.php, and add '/rss' to the url.
 
 **Notice** `:noOfItems` is the number of rss-articles you want in your feed. It is optional (and defaults to 5).
 
@@ -54,4 +50,4 @@ Lastly, copy the contents of `petlid\rssreader\view` into `Anax-MVC\app\view`.
 
 ### Optional
 You can choose to get some basic styling of the RSS-feed by copying the catalog `petlid\rssreader\css` into `Anax-MVC\webroot` and
-adding the stylesheet in the front controller from which you call the controller, `$app->theme->addStylesheet('css/rss.css');`
+adding the stylesheet in the front controller from which you call `$app->theme->addStylesheet('css/rss.css');`
