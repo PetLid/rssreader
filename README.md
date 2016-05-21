@@ -1,5 +1,8 @@
 # rssreader
+[![Build Status](https://travis-ci.org/PetLid/rssreader.svg?branch=master)](https://travis-ci.org/PetLid/rssreader)
+
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/PetLid/rssreader/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PetLid/rssreader/?branch=master)
+
 [![Code Coverage](https://scrutinizer-ci.com/g/PetLid/rssreader/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/PetLid/rssreader/?branch=master)
 
 ## Introduction
