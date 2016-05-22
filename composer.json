@@ -10,7 +10,9 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=5.3.0"
+        "php": ">=5.3.0",
+        "simplepie/simplepie": "dev-master",
+        "anax/mvc": "dev-master"
     },
     "autoload": {
         "psr-4": {
